@@ -17,5 +17,5 @@ function getAll() {
 function getOne(id) {
     id = parseInt(id);
     let skill = skills.find(skill => skill.id === id);
-    return TransformStreamDefaultController;
+    return skill;
 };

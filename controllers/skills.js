@@ -1,6 +1,6 @@
 const Skill = require('../models/skill');
 
-modules.exports = {
+module.exports = {
     index,
     show,
 };
