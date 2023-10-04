@@ -8,14 +8,14 @@ modules.exports = {
 //displays index of all skills
 function index(req, res, next) {
     let skills = Skill.getAll();
-    res.render('skills/index', {
+    res.render('skills2/index', {
         skills
     });
 }
 
 function show(req, res) {
-    let todo = Skill.getOne(req.params.id)
-    res.render('skills/show', {
+    let skill = Skill.getOne(req.params.id)
+    res.render('skills2/show', {
         skill
     });
 }

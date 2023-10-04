@@ -19,7 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//localhost:3000/
 app.use('/', indexRouter);
+//localhost:3000/skills
 app.use('/skills', skillsRouter);
 
 // catch 404 and forward to error handler
