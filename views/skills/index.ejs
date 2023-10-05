@@ -1,9 +1,15 @@
-<body>
-    <h1>Skills</h1>
+<%- include('../partials/header') %>
+
+    <h3>To-Dos as of <%= time %></h3>
     <ul>
-        <% skills.forEach(function(s) { %>
+        <% skills.forEach(function(skill) { %>
             <li>
-              <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+              <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+              -
+              <%= skill.completed ? 'done' : 'not done' %>
+            </li>
       <% }); %>
     </ul>
-  </body>
+    <a href="/skills/new">Add New Skill</a>
+
+<%- include('../partials/footer') %>
