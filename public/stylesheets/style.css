@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.delete-skill {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-skill button {
+  color: red;
+}
+	
+li {
+  list-style: none;
+}

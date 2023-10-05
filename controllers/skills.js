@@ -5,7 +5,7 @@ module.exports = {
     show,
     new: newSkill,
     create,
-    delete,
+    delete: deleteSkill,
 };
 
 //displays index of all skills
@@ -41,5 +41,10 @@ function create(req, res) {
     //CRUDing data from models
     Skill.create(req.body);
     //redirect to /skills
+    res.redirect('/skills');
+}
+
+function deleteSkill(req, res) {
+    Skill.deleteOne(req.params.id);
     res.redirect('/skills');
 }
