@@ -4,6 +4,8 @@ module.exports = {
     index,
     show,
     new: newSkill,
+    create,
+    delete,
 };
 
 //displays index of all skills
@@ -27,4 +29,17 @@ function newSkill(req, res) {
     res.render('skills/new', {
         title: 'Add New Skill',
     });
+}
+
+function create(req, res) {
+    console.log(req.body);
+    if(req.body.completed) {
+        req.body.completed = true
+    } else {
+        req.body.completed = false
+    }
+    //CRUDing data from models
+    Skill.create(req.body);
+    //redirect to /skills
+    res.redirect('/skills');
 }
